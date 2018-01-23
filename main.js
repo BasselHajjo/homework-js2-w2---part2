@@ -1,20 +1,17 @@
-let activeModules = ["https://github.com/HackYourFuture/HTML-CSS","https://github.com/HackYourFuture/JavaScript","https://github.com/HackYourFuture/JavaScript3","https://github.com/HackYourFuture/Node.js","https://github.com/HackYourFuture/databases","https://github.com/HackYourFuture/masterclass-react-redux","https://github.com/HackYourFuture/Project","https://github.com/HackYourFuture/curriculum"];
-
+let activeModules = ["https://github.com/HackYourFuture/HTML-CSS", "https://github.com/HackYourFuture/JavaScript", "https://github.com/HackYourFuture/JavaScript3", "https://github.com/HackYourFuture/Node.js", "https://github.com/HackYourFuture/databases", "https://github.com/HackYourFuture/masterclass-react-redux", "https://github.com/HackYourFuture/Project", "https://github.com/HackYourFuture/curriculum"];
 var xhReq = new XMLHttpRequest();
-xhReq.open('GET' , 'https://api.github.com/orgs/HackYourFuture/repos' , false);
+xhReq.open('GET', 'https://api.github.com/orgs/HackYourFuture/repos', false);
 xhReq.send(null);
 var hyf = JSON.parse(xhReq.responseText);
 
-function filtering(arg){
-    for (let i = 0 ; i < activeModules.length ; i++){
-    if(arg.html_url === activeModules[i]){
-        return arg;
-    }
+function filtering(arg) {
+    for (let i = 0; i < activeModules.length; i++) {
+        if (arg.html_url === activeModules[i]) {
+            return arg;
+        }
     }
 }
-
 let results = hyf.filter(filtering);
-
 document.getElementById("container").innerHTML = `
 <h1 class="title">Active Repositories (${new Date().getFullYear()})</h1>
 ${results.map(respositories).join('')}
@@ -22,7 +19,7 @@ ${results.map(respositories).join('')}
 <p class="footer">This demonstrate was created by <a href="https://github.com/BasselHajjo" target="_blank"><strong>Bassel Hajjo</strong></a>.</p>
 `
 
-function respositories(str){
+function respositories(str) {
     return `
 <div class="specs">
 <img class="images" src="https://avatars2.githubusercontent.com/u/20858568?v=4">
@@ -37,8 +34,6 @@ function respositories(str){
 </div>
 `
 }
-
-
 //function forksCount(arg){
 //    if(arg.forks_count = 0 ){
 //        return "None"
@@ -48,9 +43,7 @@ function respositories(str){
 //        return arg.forks_count + " forks ."
 //    }
 //}
-
 // line 29 ${specs(str)}!! to return "No specific lanuage !" if the language is null , but when i run it, it runs as a map inside a map so the results i get is all the languages in every single div ..
-
 //function specs(){
 //    for (let i = 0 ; i < str.length ; i++){
 //    if (str[i].language != null){
@@ -59,10 +52,7 @@ function respositories(str){
 //`
 //    }else{
 //        return
-//            `<h4>No specific lanuage !</h4>`
+//            `<h4>No specific language !</h4>`
 //    }
 //  }
 //}
-
-
-

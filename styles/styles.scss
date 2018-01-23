@@ -1,0 +1,118 @@
+@import "reset";
+@import "variables";
+@import "maxin";
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: 40%;
+    margin: 0 30%;
+    @include mQ(600px) {
+        width: 80%;
+        margin: 0 10%;
+    }
+    @include mQ(600px, 700px) {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
+.logo2 {
+    width: 60%;
+    margin: 0 20%;
+}
+
+.title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.6rem;
+}
+
+.specs {
+    max-width: 650px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border-radius: 30px;
+    @include mQ(600px) {
+        max-width: 90%;
+        padding: 10px;
+        margin: 30px 5%;
+    }
+    @include mQ(600px, 700px) {
+        max-width: 90%;
+        padding: 10px;
+        margin: 30px 5%;
+    }
+    &:hover {
+        background: darken(#fff, 3);
+    }
+    h4 {
+        margin: 0 0 6px 0;
+    }
+}
+
+.images {
+    float: left;
+    width: 40%;
+    margin-right: 45px;
+    border-radius: 30px;
+    @include mQ(600px) {
+        float: none;
+        width: 70%;
+        margin: 0 15%;
+    }
+    @include mQ(600px, 700px) {
+        float: none;
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+.resName {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+}
+
+.website {
+    font-size: 0.9rem;
+    color: $linkColor;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.res-list {
+    padding: 0;
+    position: relative;
+    left: 17px;
+    font-size: 1rem;
+    line-height: 2.5;
+    li {
+        @include mQ(600px) {
+            margin: 0 25px;
+            font-size: 0.85rem;
+        }
+        @include mQ(600px, 700px) {
+            margin: 0 25px;
+            font-size: 1rem;
+        }
+    }
+}
+
+.footer {
+    font-size: 0.7rem;
+    color: $linkColor;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.footerLogo {
+    padding: 20px 0;
+    background-color: black;
+    border-top: solid 3px $redLogo;
+}
