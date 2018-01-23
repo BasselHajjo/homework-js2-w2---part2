@@ -1,0 +1,76 @@
+body {
+  font-family: "Ubuntu";
+  background-color: #dedede;
+  color: #333;
+  padding: 20px 0 28px 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo{
+  width: 40%;
+  margin: 0 30%;
+}
+
+.title {
+  text-align: center;
+  font-weight: normal;
+  font-size: 2.6rem;
+}
+
+.specs {
+  max-width: 650px;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.specs h4 {
+  margin: 0 0 6px 0;
+}
+
+.images {
+  float: left;
+  width: 40%;
+  margin-right: 45px;
+}
+
+.resName {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0 0 1rem 0;
+}
+
+.website {
+  font-size: 0.9rem;
+  color: #888;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.res-list {
+  margin: 30px 0;
+  padding: 0;
+  position: relative;
+  left: 17px;
+  font-size: 1rem;
+  line-height: 2.5;
+}
+
+h4{
+    color: #C41022;
+}
+
+.footer {
+  font-size: 0.7rem;
+  color: #888;
+  text-align: center;
+  margin: 0;
+}
