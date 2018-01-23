@@ -16,7 +16,7 @@ document.getElementById("container").innerHTML = `
 <h1 class="title">Active Repositories (${new Date().getFullYear()})</h1>
 ${results.map(respositories).join('')}
 <p class="footer">These ${results.length} repositories are active now, contact <a href="http://www.hackyourfuture.net/" target="_blank"><strong>Hack Your Future</strong></a> for more information.</p>
-<p class="footer">This demonstrate was created by <a href="https://github.com/BasselHajjo" target="_blank"><strong>Bassel Hajjo</strong></a>.</p>
+<p class="footer">This demonstration was created by <a href="https://github.com/BasselHajjo" target="_blank"><strong>Bassel Hajjo</strong></a>.</p>
 `
 
 function respositories(str) {
