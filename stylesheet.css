@@ -2,7 +2,7 @@ body {
   font-family: "Ubuntu";
   background-color: #dedede;
   color: #333;
-  padding: 20px 0 28px 0;
+  padding: 20px 0 0 0;
   margin: 0;
 }
 
@@ -14,6 +14,11 @@ img {
 .logo{
   width: 40%;
   margin: 0 30%;
+}
+
+.logo2{
+  width: 60%;
+  margin: 0 20%;
 }
 
 .title {
@@ -56,7 +61,7 @@ img {
 }
 
 .res-list {
-  margin: 30px 0;
+  /*margin: 15px 0;*/
   padding: 0;
   position: relative;
   left: 17px;
@@ -72,5 +77,57 @@ h4{
   font-size: 0.7rem;
   color: #888;
   text-align: center;
-  margin: 0;
+  margin: 0 0 20px 0;
+}
+
+.footerLogo{
+    padding: 20px 0;
+    background-color: black;
+    border-top: solid 3px #C41022;
+}
+
+@media (max-width: 600px){
+    
+ .images {
+  float: none;
+  width: 70%;
+  margin: 0 15%;
+}
+ li {
+  margin: 0 25px;
+  font-size: 0.85rem;
+    }
+.logo{
+  width: 80%;
+  margin: 0 10%;
+}
+    
+.specs {
+  max-width: 90%;
+  padding: 10px;
+  margin: 30px 5%;
+}
+}
+
+@media (min-width:600px) and (max-width: 700px){
+ .specs {
+  max-width: 90%;
+  padding: 10px;
+  margin: 30px 5%;
+} 
+    
+ .logo{
+  width: 80%;
+  margin: 0 10%;
+}
+    
+ .images {
+  float: none;
+  width: 70%;
+  margin:0 15%;
+}
+ li {
+  margin: 0 25px;
+  font-size: 1rem;
+    }
 }
