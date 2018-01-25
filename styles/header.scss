@@ -2,7 +2,11 @@
 .logo {
     width: 20%;
     margin: 20px 20px;
-    @include mQ(850px) {
+    @include mQ(520px){
+        width: 70%;
+        margin: 10px 15% 0 15%;
+    }
+    @include mQ(520px , 850px) {
         width: 80%;
         margin: 0 10%;
     }
@@ -27,6 +31,9 @@
 .helping-div {
     height: 75px;
     width: 100%;
+    @include mQ(850px) {
+        height: 30px;
+    }
 }
 
 .nav {

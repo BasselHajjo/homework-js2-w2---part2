@@ -12,7 +12,11 @@ h4 {
 .logo {
   width: 20%;
   margin: 20px 20px; }
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 520px) {
+    .logo {
+      width: 70%;
+      margin: 10px 15% 0 15%; } }
+  @media screen and (min-width: 520px) and (max-width: 850px) {
     .logo {
       width: 80%;
       margin: 0 10%; } }
@@ -35,6 +39,9 @@ h4 {
 .helping-div {
   height: 75px;
   width: 100%; }
+  @media screen and (max-width: 850px) {
+    .helping-div {
+      height: 30px; } }
 
 .nav {
   font-size: 95%;
@@ -153,7 +160,10 @@ h4 {
   @media screen and (max-width: 520px) {
     #nav-icon1 {
       width: 30px;
-      height: 20px; } }
+      height: 20px;
+      margin: auto 10px;
+      position: absolute;
+      top: 10px; } }
   @media (min-width: 850px) {
     #nav-icon1 {
       display: none; } }
@@ -211,6 +221,9 @@ h4 {
 
 .openNav {
   display: block; }
+
+.closeNav {
+  display: none; }
 
 img {
   max-width: 100%;
