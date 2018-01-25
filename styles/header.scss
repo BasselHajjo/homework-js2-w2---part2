@@ -1,0 +1,144 @@
+@import "variables";
+.logo {
+    width: 20%;
+    margin: 20px 20px;
+    @include mQ(850px) {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    border-bottom: solid 3px $redLogo;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 2;
+    @include mQ(520px){
+        height: 45px;
+    }
+}
+
+.helping-div {
+    height: 75px;
+    width: 100%;
+}
+
+.nav {
+    font-size: 95%;
+    list-style: none;
+    text-align: center;
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 75%;
+    height: 25px;
+    @include mQ(850px) {
+        width: 100%;
+        display: none;
+    }
+    li {
+        display: inline-block;
+        width: calc(85% / 8);
+        padding: 21px 0;
+        transition: all 0.3s;
+        @include mQ(850px) {
+
+            background-color: black;
+            border-bottom: solid 3px $redLogo;
+            width: 100%;
+    }
+        &:hover {
+            background-color: #c1c1c1;
+            border-bottom: solid 3px $redLogo;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.intro {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background: url(http://www.hackyourfuture.net/css/images/main-home.jpg) no-repeat 50% 50%;
+    display: table;
+    top: 0;
+    background-size:cover;
+    z-index: -10;
+    .inner {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        background-color: rgba(0,0,0,0.5);
+        z-index: -5;
+        
+    }
+}
+
+.content {
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+        font-size: 350%;
+        font-weight: 300;
+        color: #efefe9;
+        line-height: 100%;
+        letter-spacing: 2px;
+        @include mQ(850px){
+            font-size: 250%;
+        }
+        @include mQ(520px){
+            font-size: 100%;
+        }
+    }
+}
+
+.btn {
+    font-size: 135%;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 9px;
+    transition: all 0.5s;
+    &:hover {
+        color: $redLogo;
+        border: solid $redLogo 2px;
+    }
+    @include mQ(520px){
+            font-size: 80%;
+        }
+}
+
+.copyright{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: white;
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+.os-animation{
+ 	opacity: 0;
+ }  
+
+.os-animation.animated{
+  	opacity: 1;
+  } 
