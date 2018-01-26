@@ -51,7 +51,7 @@
     }
     li {
         display: inline-block;
-        width: calc(85% / 8);
+        width: calc(85% / 7);
         padding: 21px 0;
         transition: all 0.3s;
         @include mQ(850px) {
