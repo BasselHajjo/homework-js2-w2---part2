@@ -1,4 +1,4 @@
-let activeModules = ["https://github.com/HackYourFuture/HTML-CSS", "https://github.com/HackYourFuture/JavaScript", "https://github.com/HackYourFuture/JavaScript3", "https://github.com/HackYourFuture/Node.js", "https://github.com/HackYourFuture/databases", "https://github.com/HackYourFuture/masterclass-react-redux", "https://github.com/HackYourFuture/Project", "https://github.com/HackYourFuture/curriculum"];
+let activeModules = ["https://github.com/HackYourFuture/HTML-CSS", "https://github.com/HackYourFuture/JavaScript", "https://github.com/HackYourFuture/JavaScript3", "https://github.com/HackYourFuture/Node.js", "https://github.com/HackYourFuture/databases", "https://github.com/HackYourFuture/masterclass-react-redux", "https://github.com/HackYourFuture/Project"];
 var xhReq = new XMLHttpRequest();
 xhReq.open('GET', 'https://api.github.com/orgs/HackYourFuture/repos', false);
 xhReq.send(null);
@@ -11,7 +11,10 @@ function filtering(arg) {
         }
     }
 }
+
+
 let results = hyf.filter(filtering);
+
 document.getElementById("container").innerHTML = `
 <h1 class="title">Active Repositories (${new Date().getFullYear()})</h1>
 ${results.map(respositories).join('')}
@@ -35,28 +38,55 @@ function respositories(str) {
 </div>
 `
 }
-//function forksCount(arg){
-//    if(arg.forks_count = 0 ){
-//        return "None"
-//    }else if (arg.forks_count = 1){
-//        return arg.forks_count + " fork ."
-//    }else{
-//        return arg.forks_count + " forks ."
-//    }
-//}
-// line 29 ${specs(str)}!! to return "No specific lanuage !" if the language is null , but when i run it, it runs as a map inside a map so the results i get is all the languages in every single div ..
-//function specs(){
-//    for (let i = 0 ; i < str.length ; i++){
-//    if (str[i].language != null){
-//            return `
-//<h4>Language : ${str[i].language}</h4>
-//`
-//    }else{
-//        return
-//            `<h4>No specific language !</h4>`
-//    }
-//  }
-//}
+
+
+let lang = results.map(function(arg){
+    if (arg.language){
+      return "Language: "  + arg.language;
+    }else{
+        return "Language: No specific language !";
+    }  
+});
+
+let stargazer = results.map(function(arg){
+    if (arg.stargazers_count == 0){
+        return "Number of stargazers: No stargazers yet";
+    }else if(arg.stargazers_count == 1){
+        return "Number of stargazers: " + arg.stargazers_count + " Stargazer.";
+    }else{
+        return "Number of stargazers: " + arg.stargazers_count + " Stargazers.";
+    }
+})
+
+let Watcher = results.map(function(arg){
+    if (arg.watchers_count == 0){
+        return "Number of watchers: No watchers yet";
+    }else if(arg.watchers_count == 1){
+        return "Number of watchers: " + arg.watchers_count + " Watcher.";
+    }else{
+        return "Number of watchers: " + arg.watchers_count + " Watchers.";
+    }
+})
+
+let fork = results.map(function(arg){
+    if (arg.forks_count == 0){
+        return "Number of forks: No forks yet";
+    }else if(arg.forks_count == 1){
+        return "Number of forks: " + arg.forks_count + " Fork.";
+    }else{
+        return "Number of forks: " + arg.forks_count + " Forks.";
+    }
+})
+
+console.log(lang);
+console.log(stargazer);
+console.log(Watcher);
+console.log(fork);
+
+
+
+
+
 
 $('.nav').localScroll();
 
